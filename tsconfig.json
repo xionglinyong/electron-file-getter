@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "commonjs",
+    "lib": [
+      "ES2015"
+    ],
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "sourceMap": true,
+    "outDir": "dist",
+    "rootDir": "./src",
+    "strict": true
+  },
+  "include": [
+    "src/index.ts",
+    "src/interface.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/net-listener/*.ts",
+    "src/utils/*.ts"
+  ]
+}
