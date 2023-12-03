@@ -1,6 +1,7 @@
-# electron-dl-ts
+# electron-download
 
-A electron multi-file parallel download library, based on electron-dl changes in:
+A electron multi-file parallel download library, based on [electron-dl](https://github.com/sindresorhus/electron-dl/)
+changes in:
 
 - Support multi-file download at the same time
 - Support detection of network disconnection and continue downloading after network recovery
@@ -8,7 +9,7 @@ A electron multi-file parallel download library, based on electron-dl changes in
 ## Installation
 
 ```bash
-pnpm install electron-dl-ts
+pnpm install electron-download
 ```
 
 ## Usage
@@ -16,7 +17,7 @@ pnpm install electron-dl-ts
 in `main.ts`:
 
 ```typescript
-import { download } from 'electron-dl-ts'
+import { download } from 'electron-download'
 import { BrowserWindow } from 'electron'
 
 enum DownLoadEvent {

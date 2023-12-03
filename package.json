@@ -1,5 +1,5 @@
 {
-  "name": "electron-dl-ts",
+  "name": "electron-download",
   "version": "0.0.1",
   "description": "A electron multi-file parallel download library, based on electron-dl changes in",
   "main": "dist/index.cjs.js",
@@ -19,19 +19,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coder-linyong/electron-dl-ts.git"
+    "url": "git+https://github.com/coder-linyong/electron-download.git"
   },
   "keywords": [
     "electron",
     "download",
     "rollup",
-    "electron-download"
+    "electron-download",
+    "app",
+    "file",
+    "downloader",
+    "progress"
   ],
   "author": "2690363124@qq.com",
   "bugs": {
-    "url": "https://github.com/coder-linyong/electron-dl-ts/issues"
+    "url": "https://github.com/coder-linyong/electron-download/issues"
   },
-  "homepage": "https://github.com/coder-linyong/electron-dl-ts#readme",
+  "homepage": "https://github.com/coder-linyong/electron-download#readme",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.5",
@@ -48,11 +52,11 @@
     "typescript": "^5.3.2"
   },
   "dependencies": {
-    "electron": "^27.1.3",
+    "electron": ">=7.1.7",
     "ext-name": "^5.0.0"
   },
   "peerDependencies": {
-    "electron": "^27.1.3",
+    "electron": ">=7.1.7",
     "ext-name": "^5.0.0"
   }
 }
