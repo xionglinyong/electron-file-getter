@@ -1,10 +1,10 @@
 {
-  "name": "electron-download",
-  "version": "0.0.2",
+  "name": "electron-file-getter",
+  "version": "0.0.3",
   "description": "A electron multi-file parallel download library, based on electron-dl changes in",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "jsnext:main": "dist/index.esm.js",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "jsnext:main": "dist/index.mjs",
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -19,13 +19,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coder-linyong/electron-download.git"
+    "url": "git+https://github.com/coder-linyong/electron-file-getter.git"
   },
   "keywords": [
     "electron",
     "download",
     "rollup",
-    "electron-download",
+    "electron-file-getter",
     "app",
     "file",
     "downloader",
@@ -33,9 +33,9 @@
   ],
   "author": "2690363124@qq.com",
   "bugs": {
-    "url": "https://github.com/coder-linyong/electron-download/issues"
+    "url": "https://github.com/coder-linyong/electron-file-getter/issues"
   },
-  "homepage": "https://github.com/coder-linyong/electron-download#readme",
+  "homepage": "https://github.com/coder-linyong/electron-file-getter#readme",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.5",

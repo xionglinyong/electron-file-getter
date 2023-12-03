@@ -1,4 +1,4 @@
-# electron-download
+# electron-file-getter
 
 A electron multi-file parallel download library, based on [electron-dl](https://github.com/sindresorhus/electron-dl/)
 changes in:
@@ -9,7 +9,7 @@ changes in:
 ## Installation
 
 ```bash
-pnpm install electron-download
+pnpm install electron-file-getter
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ pnpm install electron-download
 in `main.ts`:
 
 ```typescript
-import { download } from 'electron-download'
+import { download } from 'electron-file-getter'
 import { BrowserWindow } from 'electron'
 
 enum DownLoadEvent {
