@@ -12,7 +12,11 @@
     "node": ">=12"
   },
   "files": [
-    "dist"
+    "dist/index.mjs",
+    "dist/index.mjs",
+    "dist/index.umd.js",
+    "dist/index.d.ts",
+    "dist/interface.d.ts"
   ],
   "scripts": {
     "build": "rollup -c"
