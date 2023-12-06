@@ -31,7 +31,7 @@ export interface DownloadOption {
 
    Default: [User's downloads directory](https://electronjs.org/docs/api/app/#appgetpathname)
    */
-  readonly directory?: string
+  directory?: string
 
   /**
    Name of the saved file.
