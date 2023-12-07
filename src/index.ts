@@ -1,4 +1,4 @@
-import { app, BrowserWindow, dialog, DownloadItem, Session, shell, WebContents } from 'electron'
+import { app, BrowserWindow, DownloadItem, Session, shell, WebContents } from 'electron'
 import addNetListener from './net-listener/main'
 import { CancelError, DownloadFile, DownloadOption, DownloadProgress, NetStatus } from './interface.js'
 import { startNetListener } from './net-listener/browser'
@@ -174,14 +174,9 @@ function registerListener (
 }
 
 export async function download (window: BrowserWindow, url: string, options: DownloadOption = {}): Promise<CancelError | DownloadItem> {
-  const selectResult = await dialog.showOpenDialog(window, {
-    properties: ['openDirectory']
-  })
-  if (selectResult.canceled || !selectResult.filePaths) return Promise.reject(new CancelError())
   return new Promise((resolve, reject) => {
     options = {
-      ...options,
-      directory: selectResult.filePaths[0]
+      ...options
     }
 
     window.on('closed', () => {

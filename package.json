@@ -1,6 +1,6 @@
 {
   "name": "electron-file-getter",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A electron multi-file parallel download library, based on electron-dl changes in",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
