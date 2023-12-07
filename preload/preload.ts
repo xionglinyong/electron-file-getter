@@ -1,4 +1,6 @@
-const {ipcRenderer} = require('electron')
+import { ipcRenderer } from 'electron'
+
+type window = any
 
 window.addEventListener('online', () => {
   console.log('online')
