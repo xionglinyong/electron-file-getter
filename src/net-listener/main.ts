@@ -1,5 +1,5 @@
 import { app, ipcMain, IpcMainEvent } from 'electron'
-import { NetStatus } from '../index'
+import { NetStatus } from '../interface'
 
 type Callback = (event: IpcMainEvent, ...args: any[]) => void
 

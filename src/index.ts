@@ -17,7 +17,7 @@ const progressDownloadItems = () => receivedBytes / totalBytes
 
 addNetListener(
   () => {
-    downloadItems.forEach((item) => item.resume())
+    downloadItems.forEach((item) => !item.isPaused() && item.resume())
   },
   () => {
   }

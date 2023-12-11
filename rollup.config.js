@@ -42,6 +42,7 @@ export default [
         tsconfig: 'tsconfig.json',
         declaration: false,
         declarationDir: 'dist/preload',
+        composite: false,
         outDir: 'dist/preload',
       }),
       json(),
