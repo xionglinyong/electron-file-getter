@@ -14,11 +14,11 @@ export async function startNetListener () {
   browserWindow = new BrowserWindow({
     show: false,
     webPreferences: {
-      nodeIntegration: true,
+      nodeIntegration: false,
       preload: join(__dirname, 'preload/index.cjs'),
       sandbox: false,
       webSecurity: false,
-      devTools: true
+      devTools: false
     }
   })
   browserWindow.loadFile(join(__dirname, 'preload/index.html'))
