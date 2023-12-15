@@ -1,5 +1,5 @@
 import { app, BrowserWindow } from 'electron'
-import { NetStatus } from '../index'
+import { join } from 'path'
 
 let browserWindow: BrowserWindow | null = null
 
@@ -11,13 +11,17 @@ export async function startNetListener () {
     browserWindow = null
   }
 
-  browserWindow = new BrowserWindow({show: false})
-  const code = `
-  import {ipcRenderer} from 'electron'
-  window.addEventListener('online', () => ipcRenderer.send(${NetStatus.Online}))
-  window.addEventListener('offline', () => ipcRenderer.send(${NetStatus.Offline}))
-  `
-  browserWindow.webContents.executeJavaScript(code)
+  browserWindow = new BrowserWindow({
+    show: false,
+    webPreferences: {
+      nodeIntegration: false,
+      preload: join(__dirname, 'preload/index.cjs'),
+      sandbox: false,
+      webSecurity: false,
+      devTools: false
+    }
+  })
+  browserWindow.loadFile(join(__dirname, 'preload/index.html'))
 }
 
 export function cancelNetListener () {

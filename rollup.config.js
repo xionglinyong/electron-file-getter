@@ -25,7 +25,7 @@ export default [
     external: ['electron', 'ext-name']
   },
   {
-    input: 'preload/index.ts',
+    input: 'src/preload/index.ts',
     output: [
       {
         dir: 'dist/preload',
@@ -38,14 +38,20 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({module: 'ESNext'}),
+      typescript({
+        tsconfig: 'tsconfig.json',
+        declaration: false,
+        declarationDir: 'dist/preload',
+        composite: false,
+        outDir: 'dist/preload',
+      }),
       json(),
       copy({
         targets: [
-          {src: 'preload/index.html', dest: 'dist/preload'}
+          {src: 'src/preload/index.html', dest: 'dist/preload'}
         ],
       }),
     ],
-    external: ['electron']
+    external: ['electron'],
   }
 ]
