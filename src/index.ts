@@ -9,7 +9,7 @@ import * as path from 'path'
 
 type ListenerCallback = (err: CancelError | null, item: DownloadItem) => void
 
-const sessions = new Set<Session>()
+const sessions = new WeakSet<Session>()
 const downloadItems = new Map<DownloadItem, DownloadOption>()
 let receivedBytes = 0
 let totalBytes = 0
@@ -192,10 +192,6 @@ export async function download (window: BrowserWindow, url: string, options: Dow
     options = {
       ...options
     }
-
-    window.on('closed', () => {
-      sessions.delete(window.webContents.session)
-    })
 
     registerListener(window.webContents.session, options, (error, item) => {
       if (error) {
