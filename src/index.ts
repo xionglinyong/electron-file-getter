@@ -1,7 +1,6 @@
 import { app, BrowserWindow, DownloadItem, Session, shell, WebContents } from 'electron'
-import addNetListener from './net-listener/main'
-import { CancelError, DownloadFile, DownloadOption, DownloadProgress, NetStatus } from './interface.js'
-import { startNetListener } from './net-listener/browser'
+import addNetListener from './net-listener'
+import { CancelError, DownloadFile, DownloadOption, DownloadProgress } from './interface.js'
 import { getFilenameFromMime, unusedFilename } from './utils/filename'
 import { majorElectronVersion } from './utils/version'
 import { getWindowFromWebContents } from './utils/window'
@@ -25,7 +24,6 @@ addNetListener(
   () => {
   }
 )
-startNetListener()
 
 
 function listener (_: any, item: DownloadItem, webContents: WebContents, callback: ListenerCallback) {
@@ -212,5 +210,5 @@ export async function download (window: BrowserWindow, url: string, options: Dow
 export {
   DownloadFile,
   DownloadProgress,
-  DownloadOption, NetStatus
+  DownloadOption
 }

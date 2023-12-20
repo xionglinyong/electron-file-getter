@@ -9,8 +9,6 @@
     "node": ">=12"
   },
   "files": [
-    "dist/preload/index.html",
-    "dist/preload/index.cjs",
     "dist/index.cjs",
     "dist/interface.d.ts",
     "dist/index.d.ts"
