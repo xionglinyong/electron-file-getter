@@ -14,7 +14,7 @@ pnpm install electron-file-getter
 
 ## Usage
 
-in `main.ts`:
+in `index.ts`:
 
 ```typescript
 import { download } from 'electron-file-getter'
