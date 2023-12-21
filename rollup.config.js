@@ -18,7 +18,7 @@ export default [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({module: 'ESNext'}),
+      typescript({module: 'ESNext', tsconfig: './tsconfig.rollup.json'}),
       json()
     ],
     external: ['electron', 'ext-name']

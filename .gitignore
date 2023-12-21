@@ -2,3 +2,4 @@ node_modules
 dist
 .idea
 todo.md
+app/node_modules
